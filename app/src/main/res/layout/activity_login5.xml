@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBrokenWhite">
+    <ImageView
+        android:id="@+id/bg_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="273dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="273dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:tint="@color/colorBl"
+                android:src="@drawable/blue_bg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:fontFamily="@font/semibold"
+                android:text="Welcome \nPlease SIGN IN"/>
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="62dp"
+            android:layout_marginRight="62dp"
+            android:layout_marginTop="36.7dp"
+            android:background="@drawable/blue_border_rounded_cornwe">
+
+            <!-- INPUT -->
+            <EditText
+                android:id="@+id/edt_nip"
+                android:layout_toEndOf="@+id/iv_user"
+                android:hint="NIP/NPM"
+                android:textSize="16sp"
+               android:paddingLeft="17dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorLanding"
+                android:maxLines="1"
+                android:fontFamily="@font/medium"
+                android:inputType="number"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- ICON -->
+            <ImageView
+                android:id="@+id/iv_user"
+                android:src="@drawable/icon_person"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:adjustViewBounds="true"
+                android:layout_marginLeft="17dp"
+                android:tint="@color/colorBl"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="62dp"
+            android:layout_marginRight="62dp"
+            android:layout_marginTop="12.7dp"
+            android:background="@drawable/blue_border_rounded_cornwe">
+
+            <!-- INPUT -->
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_toRightOf="@+id/iv_lock"
+                android:hint="Password"
+                android:paddingLeft="17dp"
+                android:paddingTop="15dp"
+                android:maxLines="1"
+                android:textSize="16sp"
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorLanding"
+                android:paddingBottom="15dp"
+                android:maxLength="10"
+                android:fontFamily="@font/medium"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- ICON -->
+            <ImageView
+                android:id="@+id/iv_lock"
+                android:src="@drawable/icon_pass"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:adjustViewBounds="true"
+                android:layout_marginStart="17dp"
+                android:layout_centerVertical="true"
+                android:tint="@color/colorBl"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="62dp"
+            android:layout_marginRight="62dp"
+            android:layout_marginTop="25dp">
+            <ProgressBar
+                android:id="@+id/pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/colorBl"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:onClick="btnLogin"
+                android:text="Login"
+                android:textStyle="bold"
+                android:fontFamily="@font/medium"
+                android:background="@drawable/black_fill__rounded_color"
+                />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

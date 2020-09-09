@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_layout_course"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorActivityConfiguration">
+
+    <RelativeLayout
+        android:id="@+id/relative_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorWhite">
+
+        <ProgressBar
+            android:id="@+id/pb_configure"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            tools:visibility="invisible"
+            android:indeterminateDrawable="@drawable/progressbar">
+
+
+        </ProgressBar>
+
+        <ImageView
+            android:id="@+id/bg_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_radius_white"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_kdmk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Course ID"
+                android:fontFamily="@font/semibold"
+                android:textColor="@color/colorBlack"
+                android:textSize="19dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_kdmk"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/line" />
+
+            <RelativeLayout
+                android:id="@+id/layout_mkvalue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/line">
+
+                <LinearLayout
+                    android:id="@+id/left_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_namamk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Course Name"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_sks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SKS"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_hari"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_waktu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_ruang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Class"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_jumlah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Student"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mid_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/left_layout"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/dots1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/dots2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/dots3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/dots4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/dots5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/dots6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/right_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/mid_layout"
+                    android:orientation="vertical"
+                    android:textColor="@color/colorBlack"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_value_namamk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tugas Akhir"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_value_sks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_value_hari"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Senin"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_value_waktu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12:00 - 13:00"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_value_ruang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laboratorium SJA"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_value_kuota"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/semibold"
+                android:textColor="@color/colorRed"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:visibility="gone"
+                android:layout_below="@id/layout_mkvalue"/>
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_show_configure"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="70dp"
+            android:layout_alignParentBottom="true"
+            android:text="SHOW STUDENTS"
+            android:visibility="gone"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/medium"
+            android:background="@drawable/grey_fill__rounded_color"/>
+
+        <Button
+            android:id="@+id/btn_start_configure"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:text="START ATTENDANCE"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            android:fontFamily="@font/medium"
+            android:background="@drawable/blue_fill__rounded_color" />
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBl">#272727</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#00BCD4</color>
+    <color name="colorSplashScreen">#366C89</color>
+    <color name="colorLanding">#6A757A</color>
+    <color name="colorDotsLanding">#00BCD4</color>
+    <color name="colorWhite">#FFFF</color>
+    <color name="colorBrokenWhite">#F3F7FA</color>
+    <color name="colorNavy">#2D3A7E</color>
+    <color name="colorGray">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorProfil">#5F5D5D</color>
+    <color name="colorGrey">#A09D9D</color>
+    <color name="colorGif">#0E1E2E</color>
+    <color name="colorBtnLogin">#104267</color>
+    <color name="colorActivityConfiguration">#9CA9B5</color>
+    <color name="colorRed">#970202</color>
+    <color name="colorGreen">#53BE57</color>
+    <color name="colorGreenUSK">#125714</color>
+    <color name="colorBlueUSK">#1566e0</color>
+
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="id.ac.unsyiah.android.absen_mobile.Fragment.DashboardFragment"
+        android:label="Today's Course"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_matkul"
+        android:name="id.ac.unsyiah.android.absen_mobile.Fragment.MatkulFragment"
+        android:label="Course's List"
+        tools:layout="@layout/fragment_matkul" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="id.ac.unsyiah.android.absen_mobile.Fragment.AboutFragment"
+        android:label="@string/drawer_about"
+        tools:layout="@layout/fragment_about" />
+
+
+</navigation>
