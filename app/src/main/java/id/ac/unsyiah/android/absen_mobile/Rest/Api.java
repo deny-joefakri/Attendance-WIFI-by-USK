@@ -69,4 +69,10 @@ public interface Api {
             @Field("status") int status
     );
 
+    @FormUrlEncoded
+    @POST("update_mhs_attendance.php")
+    Call<MahasiswaResponse> updateMahasiswaStatus(
+            @Field("npm") String npm,
+            @Field("attendance_status") String attendance_status
+    );
 }

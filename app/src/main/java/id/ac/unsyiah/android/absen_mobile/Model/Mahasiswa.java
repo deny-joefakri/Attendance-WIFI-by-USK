@@ -12,14 +12,9 @@ public class Mahasiswa {
     private String nama;
     @SerializedName("kd_mk")
     private String kd_mk;
+    @SerializedName("attendance_status")
+    private String attendance_status;
 
-
-    public Mahasiswa(String npm, String nama, String kd_mk) {
-        this.npm = npm;
-        this.nama = nama;
-        this.kd_mk = kd_mk;
-
-    }
 
     public String getNpm() {
         return npm;
@@ -31,5 +26,20 @@ public class Mahasiswa {
 
     public String getKode_mk() {
         return kd_mk;
+    }
+
+    public Mahasiswa(String npm, String nama, String kd_mk, String attendance_status) {
+        this.npm = npm;
+        this.nama = nama;
+        this.kd_mk = kd_mk;
+        this.attendance_status = attendance_status;
+    }
+
+    public String getAttendance_status() {
+        return attendance_status;
+    }
+
+    public void setAttendance_status(String attendance_status) {
+        this.attendance_status = attendance_status;
     }
 }

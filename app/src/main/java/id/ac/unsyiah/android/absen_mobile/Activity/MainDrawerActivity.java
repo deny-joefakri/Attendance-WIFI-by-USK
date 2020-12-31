@@ -29,7 +29,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import id.ac.unsyiah.android.absen_mobile.Activity.Response.LogoutResponse;
 import id.ac.unsyiah.android.absen_mobile.R;
 import id.ac.unsyiah.android.absen_mobile.Rest.RetrofitClient;
-import id.ac.unsyiah.android.absen_mobile.Service.ExampleService;
+import id.ac.unsyiah.android.absen_mobile.Service.AttendanceService;
 import id.ac.unsyiah.android.absen_mobile.SharedPreferences.DataStore;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -155,7 +155,7 @@ public class MainDrawerActivity extends AppCompatActivity {
                             Toast.makeText(MainDrawerActivity.this, "You have signed out", Toast.LENGTH_SHORT).show();
                             dataStore.clear();
 
-                            Intent ser = new Intent(MainDrawerActivity.this, ExampleService.class);
+                            Intent ser = new Intent(MainDrawerActivity.this, AttendanceService.class);
                             stopService(ser);
 
                             Intent intent = new Intent(MainDrawerActivity.this, LoginActivity.class);

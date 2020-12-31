@@ -5,6 +5,7 @@ package id.ac.unsyiah.android.absen_mobile.Adapter;
 import android.content.Context;
 import android.content.Intent;
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +14,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 import id.ac.unsyiah.android.absen_mobile.Activity.KonfigurasiAbsenActivity;
+import id.ac.unsyiah.android.absen_mobile.AttendanceStore.DatabaseAccess;
 import id.ac.unsyiah.android.absen_mobile.Model.Matakuliah;
 import id.ac.unsyiah.android.absen_mobile.R;
 
@@ -24,7 +28,7 @@ import id.ac.unsyiah.android.absen_mobile.R;
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MatkulViewHolder>{
     private ArrayList<Matakuliah> mkList;
     private Context context;
-
+    private DatabaseAccess databaseAccess;
 
     public MainAdapter(ArrayList<Matakuliah> mkList, Context context){
         this.mkList = mkList;
@@ -64,9 +68,20 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MatkulViewHold
 
         long diff = millisJamMasuk - now;
 
-        if (diff <= 3600000 && diff >= -3600000) {
-            matkulViewHolder.sideColorLayout.setBackgroundColor(context.getResources().getColor(R.color.colorRed));
+        databaseAccess = new DatabaseAccess(context);
+        databaseAccess.open();
+        Date date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String dateClient = simpleDateFormat.format(date);
+        if (databaseAccess.checkCourseId(mkList.get(i).getKd_mk(), dateClient)) {
+            databaseAccess.close();
+            matkulViewHolder.sideColorLayout.setBackgroundColor(ContextCompat.getColor(context, R.color.colorGreen));
+        } else {
+            if (diff <= 3600000 && diff >= -3600000) {
+                matkulViewHolder.sideColorLayout.setBackgroundColor(context.getResources().getColor(R.color.colorRed));
+            }
         }
+
 
 //        Log.d("puscantik", mkList.get(i).getKd_mk());
 

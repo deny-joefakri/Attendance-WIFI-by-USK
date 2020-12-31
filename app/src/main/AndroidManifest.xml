@@ -43,12 +43,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="id.ac.unsyiah.android.absen_mobile.Activity.LandingPageActivity" />
         <activity android:name="id.ac.unsyiah.android.absen_mobile.Activity.LoginActivity" />
-        <activity android:name="id.ac.unsyiah.android.absen_mobile.Activity.MainActivity" />
         <activity android:name="id.ac.unsyiah.android.absen_mobile.Activity.MainDrawerActivity" />
 
-        <service android:name="id.ac.unsyiah.android.absen_mobile.Service.ExampleService" />
+        <service android:name="id.ac.unsyiah.android.absen_mobile.Service.AttendanceService" />
     </application>
 
 </manifest>

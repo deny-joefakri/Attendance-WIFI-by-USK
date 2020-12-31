@@ -20,7 +20,7 @@ import id.ac.unsyiah.android.absen_mobile.Activity.ScanActivity;
 import id.ac.unsyiah.android.absen_mobile.AttendanceStore.DatabaseAccess;
 import id.ac.unsyiah.android.absen_mobile.R;
 
-public class ExampleService extends Service {
+public class AttendanceService extends Service {
     private int idAbsen, idDb, idRuang;
     private String nip, kdmk;
     private boolean stopAbsen;
@@ -87,14 +87,14 @@ public class ExampleService extends Service {
         Log.d("ExampleService", "KirimidAbsen: "+idAbsen+" "+"Kirimnip: "+nip+" "+"KirimidSQLite:" +idDb);
 
         //intent ke ScanActivity untuk pemindaian Bluetooth.
-        intent = new Intent(ExampleService.this, ScanActivity.class);
+        intent = new Intent(AttendanceService.this, ScanActivity.class);
         intent.putExtra("id_absen", idAbsen); //kirim ID absen
         intent.putExtra("nip", nip); //kirim NIP dose
         intent.putExtra("id", idDb); //kirim ID absen dari SQLite.
         intent.putExtra("idRuang", idRuang); //kirim ID ruang dari SQLite
         intent.putExtra("stopService", stopAbsen);
         intent.putExtra("kdmk", kdmk);
-        PendingIntent pendingIntent = PendingIntent.getActivity(ExampleService.this, 2, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+        PendingIntent pendingIntent = PendingIntent.getActivity(AttendanceService.this, 2, intent, PendingIntent.FLAG_CANCEL_CURRENT);
         AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
         am.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), pendingIntent);
 

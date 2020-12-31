@@ -86,15 +86,15 @@ public class WifiScanner {
         dummyData();
 //            Log.d(SIZE, "scanSuccess: result: "+results.size());
 //            Log.d(SIZE, "scanSuccess: scanned AP "+scannedAPs.size());
-        for (int i = 0; i < results.size(); i++) {
-//            Log.e("BSSID", results.get(i).BSSID);
-//            Log.e("SSID", results.get(i).SSID);
-//            Log.e("SignalStrength", results.get(i).level + "");
-            WifiModel wifiModel = filterMacAddress(results.get(i));
-            if (wifiModel != null) {
-                scannedAPs.put(wifiModel.getMacAddress(), wifiModel);
-            }
-        }
+//        for (int i = 0; i < results.size(); i++) {
+////            Log.e("BSSID", results.get(i).BSSID);
+////            Log.e("SSID", results.get(i).SSID);
+////            Log.e("SignalStrength", results.get(i).level + "");
+//            WifiModel wifiModel = filterMacAddress(results.get(i));
+//            if (wifiModel != null) {
+//                scannedAPs.put(wifiModel.getMacAddress(), wifiModel);
+//            }
+//        }
         Log.e("WIFISCANNER ScanResult", "scanSuccess: "+scannedAPs.size());
         scanActivity.stopScan();
     }

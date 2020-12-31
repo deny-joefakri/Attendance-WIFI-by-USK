@@ -40,7 +40,7 @@ import id.ac.unsyiah.android.absen_mobile.Model.Matakuliah;
 import id.ac.unsyiah.android.absen_mobile.R;
 import id.ac.unsyiah.android.absen_mobile.Rest.Api;
 import id.ac.unsyiah.android.absen_mobile.Rest.RetrofitClient;
-import id.ac.unsyiah.android.absen_mobile.Service.ExampleService;
+import id.ac.unsyiah.android.absen_mobile.Service.AttendanceService;
 import id.ac.unsyiah.android.absen_mobile.SharedPreferences.DataStore;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -330,7 +330,7 @@ public class KonfigurasiAbsenNotTodayActivity extends AppCompatActivity {
             calendar.set(Calendar.SECOND, 0);
             Log.d("SELECT_SQLITE", "nomor absen= " + nomorAbsen + " jumlah absen: "+jumlahAbsen+ " waktu = " + dataAttendance.getJamAbsen() + ":" + dataAttendance.getMenitAbsen());
 
-            Intent intent = new Intent(getApplicationContext(), ExampleService.class);
+            Intent intent = new Intent(getApplicationContext(), AttendanceService.class);
             intent.putExtra("id_absen", idAbsen); // kirim ID absen
             intent.putExtra("nip", dataStore.getNip()); // kirim NIP dose
             intent.putExtra("id", dataAttendance.getId()); // kirim ID absen dari SQLite.

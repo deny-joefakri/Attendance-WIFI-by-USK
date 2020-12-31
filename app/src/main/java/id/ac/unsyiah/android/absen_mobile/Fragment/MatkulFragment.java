@@ -27,7 +27,6 @@ import java.util.Locale;
 
 import id.ac.unsyiah.android.absen_mobile.Activity.Response.MatakuliahResponse;
 import id.ac.unsyiah.android.absen_mobile.Adapter.MainAdapter;
-import id.ac.unsyiah.android.absen_mobile.Adapter.MainAdapter2;
 import id.ac.unsyiah.android.absen_mobile.Model.Matakuliah;
 import id.ac.unsyiah.android.absen_mobile.R;
 import id.ac.unsyiah.android.absen_mobile.Rest.Api;
